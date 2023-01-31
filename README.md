@@ -1,7 +1,7 @@
 # hyperspectral_vn_unmixing
 Scripts for a basic land cover subpixel unmixing, particularly for vegetation fraction cover estimation, using a universal method based on HyTools
 
-The main step of the method is to vector nomalize the input endmembers with L2-norm to make each of the edmembers unit-norm. However, pixels in the input images are not required to undertake the same vector normalization due to a unit-sum post-processing.   
+The main step of the method is to vector nomalize the input endmembers with L2-norm to make each of the endmembers unit-norm. However, pixels in the input images are not required to undertake the same vector normalization due to a unit-sum post-processing.   
 
 
 ## Results from the workflow
