@@ -280,13 +280,8 @@ else:
    out_mat_multispec_vn = np.matmul(np.linalg.inv(em_spec_multi_vn.T@em_spec_multi_vn),em_spec_multi_vn.T)
 
    if append_sunlit_frac:
-      em_name_list+=['sunlit']
-      
-   if pixel_applied_vn:   
-      vnorm_transform=['vector']
-   else:
-      vnorm_transform=[]
-   logging.info("Vector Normalization on each pixel when applying model: {}".format(pixel_applied_vn))
+      em_name_list+=['sunlit']  
+
    
    if vecnorm_mode:
       model_name = "AllFracVNorm"+spec_mode_range[spec_mode]+multi_sensor
@@ -302,6 +297,11 @@ else:
 
    logging.info("Append a band of SUNLIT Fraction: {}".format(append_sunlit_frac))
 
+if pixel_applied_vn:   
+   vnorm_transform=['vector']
+else:
+   vnorm_transform=[]
+logging.info("Vector Normalization on each pixel when applying model: {}".format(pixel_applied_vn))
 
 common_item = {"wavelength_units":"nanometers", "type":"linear_unmixing", "spectrometer":'AVC', "description":''}
     
